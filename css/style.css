@@ -17,21 +17,44 @@ body{
 	height: 60px;
 	background-color: rgba(21,24,26,0.1);
 	border-bottom: solid 2px;
+	position: fixed;
+	top: 0;
 }
 
 .wrapper {
 	width: 75%;
+	height: 800px;
 	margin: auto;
+	background-color: red;
+	margin-top: 100px;
 }
 
 section.content {
+	background-color: green;
 	height: auto;
 }
 
-article.article {
+section.col1 {
+	float: left;
+	height: 20px;
+	clear: both;
+	width: 30%;
+	margin-right: 51px;
+}
 
+section.col2 {
+	float: left;
+	height: 20px;
+	width: 30%;
+	margin-right: 50px;
+}
+
+section.col3 {
+	float: left;
+	height: 20px;
+	width: 30%;
 }
 			
 footer {
-
+	background-color: orange;
 }
