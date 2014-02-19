@@ -8,6 +8,8 @@ Laatste update: 2014-02-18 */
 
 body{
 	background-color: #ebebeb;
+	margin: auto;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .top-fixed {
@@ -15,15 +17,15 @@ body{
 	height: 60px;
 	background-color: rgba(21,24,26,0.1);
 	border-bottom: solid 2px;
-	position: fixed;
 }
 
 .wrapper {
-
+	width: 75%;
+	margin: auto;
 }
 
 section.content {
-
+	height: auto;
 }
 
 article.article {
