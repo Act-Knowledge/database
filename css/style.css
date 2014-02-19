@@ -10,17 +10,26 @@ body{
 	background-color: #ebebeb;
 }
 
-.wrapper {
+.top-fixed {
+	width: 100%;
+	height: 60px;
+	background-color: rgba(21,24,26,0.1);
+	border-bottom: solid 2px;
+	position: fixed;
 }
 
-.top-nav {
+.wrapper {
+
 }
 
 section.content {
+
 }
 
-article {
+article.article {
+
 }
 			
 footer {
+
 }
