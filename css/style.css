@@ -6,7 +6,9 @@ Laatste update: 2014-02-18 */
 	padding:0;
 }
 
-body{}
+body{
+	background-color: #ebebeb;
+}
 
 .wrapper {
 }
