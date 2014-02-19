@@ -21,6 +21,25 @@ body{
 	top: 0;
 }
 
+nav.menu {
+	width: 75%;
+	margin: auto;
+}
+
+.top-left {
+	background-color: green;
+	width: 60%;
+	height: 60px;
+	float: left;
+}
+
+.top-right {
+	background-color: blue;
+	width: 40%;
+	height: 60px;
+	float: left;
+}
+
 .wrapper {
 	width: 75%;
 	height: 800px;
@@ -39,7 +58,7 @@ section.col1 {
 	height: 20px;
 	clear: both;
 	width: 30%;
-	margin-right: 51px;
+	margin-right: 50px;
 }
 
 section.col2 {
