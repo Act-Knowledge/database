@@ -1,5 +1,7 @@
 /* Act-Knowledge "Stylesheet" 
-Laatste update: 2014-02-18 */
+Laatste update: 2014-02-20 */
+
+/*-------------[BASIC STYLE]-------------*/
 
 * {
 	margin: 0;
@@ -12,33 +14,93 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
+/*-------------[FONT-STYLES]-------------*/
+
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+
+p {}
+b {}
+a {}
+
+/*-------------[TOP-MENU]-------------*/
+
+
 .top-fixed {
 	width: 100%;
-	height: 60px;
-	background-color: rgba(21,24,26,0.1);
-	border-bottom: solid 2px;
+	height: 56px;
+	background-color: rgba(125,125,125,0.1);
+	border-bottom: solid 2px rgba(21,24,26,0.1);
 	position: fixed;
 	top: 0;
+}
+
+.top-fixed img {
+	height: 58px;
 }
 
 nav.menu {
 	width: 75%;
 	margin: auto;
+	clear: both;
 }
 
 .top-left {
-	background-color: green;
 	width: 60%;
 	height: 60px;
 	float: left;
 }
 
+.menu-icon {
+	position: relative;
+	left: 10px;
+	top: 0;
+	height: 40px;
+	width: 40px;
+}
+
+.menu-icon img {
+	position: absolute;
+	-webkit-transition: opacity 0.1s ease-in-out;
+	-moz-transition: opacity 0.1s ease-in-out;
+	-o-transition: opacity 0.1s ease-in-out;
+	transition: opacity 0.1s ease-in-out;
+}
+
+.bottom:hover{
+	opacity: 0;
+	cursor: pointer;
+}
+
 .top-right {
-	background-color: blue;
 	width: 40%;
 	height: 60px;
-	float: left;
+	float: right;
 }
+
+.optie-icon {
+	float: right;
+	position: relative;
+	height: 60px;
+	width: 60px;
+}
+
+.optie-icon img {
+	position: absolute;
+	-webkit-transition: opacity 0.1s ease-in-out;
+	-moz-transition: opacity 0.1s ease-in-out;
+	-o-transition: opacity 0.1s ease-in-out;
+	transition: opacity 0.1s ease-in-out;
+}
+
+.after:hover{
+	opacity: 0;
+	cursor: pointer;
+}
+
+/*-------------[WRAPPER]-------------*/
 
 .wrapper {
 	width: 75%;
@@ -47,6 +109,8 @@ nav.menu {
 	background-color: red;
 	margin-top: 100px;
 }
+
+/*-------------[CONTENT]-------------*/
 
 section.content {
 	background-color: green;
@@ -73,6 +137,8 @@ section.col3 {
 	height: 20px;
 	width: 30%;
 }
+
+/*-------------[FOOTER]-------------*/
 			
 footer {
 	background-color: orange;
