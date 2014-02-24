@@ -119,23 +119,26 @@ section.content {
 
 section.col1 {
 	float: left;
-	height: 20px;
+	height: auto;
 	clear: both;
 	width: 30%;
-	margin-right: 50px;
+	margin-right: 4%;
+	border: 2px solid black;
 }
 
 section.col2 {
 	float: left;
-	height: 20px;
+	height: auto;
 	width: 30%;
-	margin-right: 50px;
+	margin-right: 4%;
+	border: 2px solid black;
 }
 
 section.col3 {
 	float: left;
-	height: 20px;
+	height: auto;
 	width: 30%;
+	border: 2px solid black;
 }
 
 /*-------------[FOOTER]-------------*/
