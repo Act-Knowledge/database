@@ -23,7 +23,8 @@ h4 {}
 
 p {}
 b {}
-a {}
+a {text-decoration: none; color: black;}
+a:hover {color: red;}
 
 /*-------------[TOP-MENU]-------------*/
 
@@ -31,9 +32,10 @@ a {}
 .top-fixed {
 	width: 100%;
 	height: 56px;
-	background-color: rgba(125,125,125,0.1);
+	background-color: rgba(200,200,200,.8);
 	border-bottom: solid 2px rgba(21,24,26,0.1);
 	position: fixed;
+	z-index: 40;
 	top: 0;
 }
 
@@ -106,15 +108,16 @@ nav.menu {
 	width: 75%;
 	height: 800px;
 	margin: auto;
-	background-color: red;
-	margin-top: 100px;
 }
 
 /*-------------[CONTENT]-------------*/
 
 section.content {
-	background-color: green;
+	padding-top: 30px;
 	height: auto;
+}
+
+.content img {
 }
 
 section.col1 {
@@ -139,6 +142,70 @@ section.col3 {
 	height: auto;
 	width: 30%;
 	border: 2px solid black;
+}
+
+
+/*-------------[UPLOADS]-------------*/
+
+#main {
+	padding-top: 240px;
+
+}
+
+.uploads {
+	height: 160px;
+	z-index: 20;
+}
+
+.image {
+	padding: 20px;
+	margin-left: 20%;
+}
+
+section.load1 {
+	margin-left: 20%;
+	float: left;
+	height: auto;
+	clear: both;
+	width: 20%;
+	border: 2px solid black;
+}
+
+section.load2 {
+	float: left;
+	height: auto;
+	width: 20%;
+	border: 2px solid black;
+}
+
+section.load3 {
+	float: left;
+	height: auto;
+	width: 20%;
+	border: 2px solid black;
+}
+
+nav.add {
+	list-style: none;
+	margin: auto;
+	width: 65%;
+	padding-left: 80px;
+}
+
+nav.add li {
+	display: inline;
+	margin-right: 90px;
+}
+
+nav.ul {
+	margin-left: 20%;
+}
+
+nav.add li img {
+	margin: 0;
+	width: 30px;
+	height: auto;
+	vertical-align: middle;
 }
 
 /*-------------[FOOTER]-------------*/
