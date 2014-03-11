@@ -1,3 +1,9 @@
+<?php
+
+require("config.php");
+
+?>
+
 <!doctype html><!-- Act-Knowledge "mark-it" 
 Laatste update: 2014-02-20 -->
 <html>
