@@ -1,5 +1,5 @@
 <?php
- 
+ Session_start();
 //Hostname, bijvoorbeeld: localhost of 127.0.0.1
 $host = "127.0.0.1";
 //Database gebruikersnaam
