@@ -38,7 +38,9 @@ if (mysqli_connect_error($con))
   
   
   
-  //Functies
-  
- require("./includes/Functions.php");
+//Functies
+require("./includes/functions.php");
+ 
+//Users class
+require("./includes/class.users.php");
 ?>

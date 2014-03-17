@@ -15,4 +15,6 @@ function Jordyhash($string) {
 	
 	return $output;
 }
+
+
 ?>
