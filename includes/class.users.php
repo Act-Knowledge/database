@@ -1,5 +1,5 @@
 <?php
-//USERS CLASS
+//USERS CLASSES
 class JordyUser {
 	var $id = 0; 
 	var $username = "Gast";

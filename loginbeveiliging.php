@@ -1,14 +1,12 @@
 <?php
 
-require("./includes/config.php");
-
-if(isset($_SESSION['gebruiker']) && isset($_SESSION['wachtwoord']))
+if(isset($_SESSION['userdata']))
 {
-echo "alles is goed";
+$logged_in = true;
 }
 else
 {
-header('Location: login.php?error=nietinlogt');
+header('Location: inloggen.php?error=nietinlogt');
 die();
 }
 ?>

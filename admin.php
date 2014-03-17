@@ -1,6 +1,6 @@
 <?php
 require("./includes/config.php");
-
+require("./loginbeveiliging.php");
 ?>
 
 <!doctype html><!-- Act-Knowledge "mark-it" 
