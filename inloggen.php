@@ -85,7 +85,7 @@ if(isset($error))
 echo $error;
 }
 ?>
-		<form action="" id="login" method="post">
+		<form action="inloggen.php" id="login" method="post">
 
 			<p>Naam:
 				<input type="text" id="username" name="username" size="15" maxlength="30" />
