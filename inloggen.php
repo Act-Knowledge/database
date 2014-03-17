@@ -5,10 +5,15 @@ require("config.php");
 if(isset($_POST['submit']))
 {
 
-$username = Security($_POST['username'];
-$password = Jordyhash($_POST['password']; 
-$con->query("SELECT * FROM users WHERE username = '".$username."' AND password = '".$password."'");
+$username = Security($_POST['username']);
+$password = Jordyhash($_POST['password']); 
+$query = $mysqli->query("SELECT * FROM users WHERE username = '".$username."' AND password = '".$password."'");
+$count = $query->num_rows;
 
+if($count > 0)
+{
+echo "hij bestaat kut";
+}
 }
 ?>
 

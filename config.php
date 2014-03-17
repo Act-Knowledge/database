@@ -1,5 +1,16 @@
 <?php
  Session_start();
+
+
+//Database verbinding
+
+function get_my_db()
+{
+static $mysqli;
+
+if (!$mysqli) 
+{
+
 //Hostname, bijvoorbeeld: localhost of 127.0.0.1
 $host = "127.0.0.1";
 //Database gebruikersnaam
@@ -9,9 +20,13 @@ $dbpass = "1234";
 //Database naam
 $dbname = "mark-it";
 
-//Database verbinding
-$con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
+$mysqli = new mysqli($host,$dbuser,$dbpass,$dbname);
+}
 
+return $mysqli;
+}
+
+$mysqli = get_my_db();
 
 //connectie error?
 if (mysqli_connect_error($con))
@@ -23,9 +38,9 @@ if (mysqli_connect_error($con))
   
   function Security($input) {
 	$output = $input;
-	
+	$mysqli = get_my_db();
 	$output = addslashes($output);
-	$output = mysql_real_escape_string($output);
+	$output = mysqli_real_escape_string($mysqli,$output);
 	$output = htmlspecialchars($output);
 	
 	return $output;
