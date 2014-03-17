@@ -1,6 +1,7 @@
 <?php
 require("./includes/config.php");
 require("./loginbeveiliging.php");
+
 ?>
 
 <!doctype html><!-- Act-Knowledge "mark-it" 
@@ -45,7 +46,7 @@ Laatste update: 2014-02-20 -->
 	<div class="wrapper">
 
 	<div id="main">
-	<?php echo "Welkom ".User::getUserData('username')."sdsad"; ?>
+	<?php echo "<center>Welkom ".User::getUserData('username').", In het allerbeste paneel ter wereld!<br>"; ?>
 			<div class="uploads">
 				<section class="load1"><img src="img/add/video.png" class="image"/></section>
 				<section class="load2"><img src="img/add/foto.png" class="image"></section>

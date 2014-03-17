@@ -43,4 +43,10 @@ require("./includes/functions.php");
  
 //Users class
 require("./includes/class.users.php");
+
+if(isset($_SESSION['userdata']))
+{
+$user = new JordyUser($_SESSION['username']);
+$_SESSION['userdata'] = $user;
+}
 ?>

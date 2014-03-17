@@ -14,6 +14,7 @@ if($count > 0)
 {
 $user = new JordyUser($username);
 $_SESSION['userdata'] = $user;
+$_SESSION['username'] = User::getUserData('username');
 ?>
 <meta http-equiv="refresh" content="0; URL=./admin.php?name=<?php echo User::getUserData('username'); ?>">
 <?php
