@@ -20,7 +20,7 @@ die();
 }
 else
 {
-$error = "Onjuist wachtwoord of gebruikersnaam"
+$error = "Onjuist wachtwoord of gebruikersnaam";
 }
 
 }
