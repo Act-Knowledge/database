@@ -18,6 +18,11 @@ $_SESSION['userdata'] = $user;
 echo "hallo ".User::getUserData('username').", <br> Je bent ingelogt!";
 die();
 }
+else
+{
+header('Location: admin.php');
+die();
+}
 
 }
 ?>
