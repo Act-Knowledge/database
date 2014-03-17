@@ -15,7 +15,7 @@ if($count > 0)
 $user = new JordyUser($username);
 $_SESSION['userdata'] = $user;
 ?>
-<meta http-equiv="refresh" content="0; URL=/admin.php">
+<meta http-equiv="refresh" content="0; URL=./admin.php">
 <?php
 die();
 }
@@ -24,6 +24,19 @@ else
 $error = "Onjuist wachtwoord of gebruikersnaam";
 }
 
+}
+
+if(isset($_GET['error']))
+{
+
+$fout = Security($_GET['error']);
+
+if($fout == 'nietingelogt')
+{
+
+$error = "Je bent niet ingelogt!";
+
+}
 }
 ?>
 
@@ -69,7 +82,13 @@ Laatste update: 2014-02-20 -->
 	<div class="wrapper">
 
 	<div id="main">
-		<form action="" method="post">
+	<?php 
+if(isset($error))
+{
+echo $error;
+}
+?>
+		<form action="inloggen.php" method="post">
 			<p>Naam:
 				<input type="text" name="username" size="15" maxlength="30" />
 			</p>

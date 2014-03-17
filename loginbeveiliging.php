@@ -7,7 +7,9 @@ $logged_in = true;
 }
 else
 {
-header('Location: inloggen.php?error=nietinlogt');
+?>
+<meta http-equiv="refresh" content="0; URL=./inloggen.php?error=nietingelogt">
+<?php
 die();
 }
 ?>

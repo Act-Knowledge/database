@@ -1,6 +1,7 @@
 <?php
 require("./includes/config.php");
 require("./loginbeveiliging.php");
+unset($_SESSION['userdata']);
 ?>
 
 <!doctype html><!-- Act-Knowledge "mark-it" 
