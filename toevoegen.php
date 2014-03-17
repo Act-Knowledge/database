@@ -23,6 +23,7 @@ Laatste update: 2014-02-20 -->
 					<img class="top" src="img/icons/mnu-hover.png" />
 					<img class="bottom" src="img/icons/mnu.png" />
 				</span>
+				
 				<!-- HTML for SEARCH BAR -->
 				<div id="tfheader">
 					<form id="tfnewsearch" method="get" action="http://www.google.com">
@@ -30,6 +31,7 @@ Laatste update: 2014-02-20 -->
 					</form>
 				<div class="tfclear"></div>
 				</div>
+
 			</div><!-- end top-left -->
 
 			<div class="top-right">
