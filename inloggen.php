@@ -79,12 +79,12 @@ Laatste update: 2014-02-20 -->
 	<div class="wrapper">
 
 	<div id="main">
-	<?php 
+<center>	<?php 
 if(isset($error))
 {
 echo $error;
 }
-?>
+?></center>
 		<form action="inloggen.php" id="login" method="post">
 
 			<p>Naam:
