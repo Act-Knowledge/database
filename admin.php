@@ -46,7 +46,7 @@ Laatste update: 2014-02-20 -->
 	<div class="wrapper">
 
 	<div id="main">
-	<?php echo "<center>Welkom ".User::getUserData('username').", In het allerbeste paneel ter wereld!<br>"; ?>
+	<?php echo "<center>Welkom ".User::getUserData('username').", In het allerbeste paneel ter wereld!<br><br>"; ?>
 			<div class="uploads">
 				<section class="load1"><img src="img/add/video.png" class="image"/></section>
 				<section class="load2"><img src="img/add/foto.png" class="image"></section>
