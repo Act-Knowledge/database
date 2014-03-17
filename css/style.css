@@ -372,3 +372,80 @@ div.col:hover h3 {
 footer {
 	background-color: orange;
 }
+
+/*-------------[index columns]-------------*/
+	.rij1 {
+		width:30%;
+		height:auto;
+		float: left;
+		margin-right: 5%;
+	} 
+
+	.rij2 {
+		width:30%;
+		height:auto;
+		float:left;
+		margin-right: 5%;
+	}
+
+	.rij3 {
+		width:30%;
+		height:auto;
+		float:right;
+	}
+	
+.tutorials {
+	-webkit-column-count:1; /* Chrome, Safari, Opera */
+	-moz-column-count:1; /* Firefox */
+	column-count:1;
+	margin-bottom: 10px;
+	border: 2px solid #000000;
+	padding: 3px;
+	background-color: white;
+	}
+
+.fotos {
+	-webkit-column-count:1; /* Chrome, Safari, Opera */
+	-moz-column-count:1; /* Firefox */
+	column-count:1;
+	margin-bottom: 10px;
+	border: 2px solid #000000;
+	padding: 3px;
+	background-color: white;
+	}
+
+.videos {
+	-webkit-column-count:1; /* Chrome, Safari, Opera */
+	-moz-column-count:1; /* Firefox */
+	column-count:1;
+	margin-bottom: 10px;
+	border: 2px solid #000000;
+	padding: 3px;
+	background-color: white;
+	}
+
+	h2 {
+		font-size: 18px;
+		vertical-align: top;
+		text-align: left;
+		width: auto;
+		border-bottom: 1px solid #000000;
+		margin-bottom: 5px;
+	}
+
+	h2:before {
+  		content: url('../img/add/doc2.png');
+  		vertical-align: top;
+  	}
+
+  	section.image {
+  		width: 80px;
+  		height: 80px;
+  		background-color: black;
+  		margin: auto;
+  		float: center;
+  	}
+
+  	section.tekst {
+  		margin: 5px;
+  	}
