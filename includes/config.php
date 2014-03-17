@@ -29,7 +29,7 @@ return $mysqli;
 $mysqli = get_my_db();
 
 //connectie error?
-if (mysqli_connect_error($con))
+if (mysqli_connect_error($mysqli))
   {
   // laat de error zien.
   die('Kan niet connecten: ' . mysqli_connect_error());
