@@ -3,6 +3,7 @@
 require("./includes/config.php");
 
 ?>
+
 <!doctype html><!-- Act-Knowledge "mark-it" 
 Laatste update: 2014-02-20 -->
 <html>
@@ -22,7 +23,7 @@ Laatste update: 2014-02-20 -->
 					<img class="top" src="img/icons/mnu-hover.png" />
 					<img class="bottom" src="img/icons/mnu.png" />
 				</span>
-
+				
 				<!-- HTML for SEARCH BAR -->
 				<div id="tfheader">
 					<form id="tfnewsearch" method="get" action="http://www.google.com">
@@ -30,7 +31,7 @@ Laatste update: 2014-02-20 -->
 					</form>
 				<div class="tfclear"></div>
 				</div>
-				
+
 			</div><!-- end top-left -->
 
 			<div class="top-right">
@@ -43,15 +44,8 @@ Laatste update: 2014-02-20 -->
 	</header><!-- end top-fixed -->
 
 	<div class="wrapper">
-		<section class="content">
-			<section class="col1">t
-			</section>
-			<section class="col2">t
-			</section>
-			<section class="col3">t
-			</section>
-		</section><!-- end content -->
-		<footer></footer>
 	</div><!-- end wrapper -->
+
+	<footer></footer>
 </body>
 </html>
