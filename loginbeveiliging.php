@@ -2,6 +2,7 @@
 
 if(isset($_SESSION['userdata']))
 {
+
 $logged_in = true;
 }
 else
