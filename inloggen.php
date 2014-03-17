@@ -94,15 +94,16 @@ if(isset($error))
 echo $error;
 }
 ?>
-		<form action="inloggen.php" method="post">
+		<form action="" id="login" method="post">
+
 			<p>Naam:
-				<input type="text" name="username" size="15" maxlength="30" />
+				<input type="text" id="username" name="username" size="15" maxlength="30" />
 			</p>
 			<p>Wachtwoord:
-				<input type="password" name="password" size="15" maxlength="30" />
+				<input type="password" id="password" name="password" size="15" maxlength="30" />
 			</p>
 
-			<input class="submit" name="submit" type="submit" value="Aanmelden">
+			<input class="submit" id="button" name="submit" type="submit" value="Aanmelden">
 		</form>
 
 
