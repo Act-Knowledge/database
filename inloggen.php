@@ -2,6 +2,12 @@
 
 require("./includes/config.php");
 
+if(isset($_SESSION['userdata']))
+{
+?>
+<meta http-equiv="refresh" content="0; URL=./admin.php">
+<?php
+}
 if(isset($_POST['submit']))
 {
 
@@ -16,7 +22,7 @@ $user = new JordyUser($username);
 $_SESSION['userdata'] = $user;
 $_SESSION['username'] = User::getUserData('username');
 ?>
-<meta http-equiv="refresh" content="0; URL=./admin.php?name=<?php echo User::getUserData('username'); ?>">
+<meta http-equiv="refresh" content="0; URL=./admin.php">
 <?php
 }
 else
