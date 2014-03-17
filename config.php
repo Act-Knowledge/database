@@ -30,4 +30,11 @@ if (mysqli_connect_error($con))
 	
 	return $output;
 }
+
+
+function Jordyhash($string) {
+	$output = sha1($string);
+	
+	return $output;
+}
 ?>

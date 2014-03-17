@@ -6,7 +6,7 @@ if(isset($_POST['submit']))
 {
 
 $username = Security($_POST['username'];
-$password = Security($_POST['password']; 
+$password = Jordyhash($_POST['password']; 
 $con->query("SELECT * FROM users WHERE username = '".$username."' AND password = '".$password."'");
 
 }
