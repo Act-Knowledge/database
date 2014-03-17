@@ -20,4 +20,14 @@ if (mysqli_connect_error($con))
   die('Kan niet connecten: ' . mysqli_connect_error());
   }
 
+  
+  function Security($input) {
+	$output = $input;
+	
+	$output = addslashes($output);
+	$output = mysql_real_escape_string($output);
+	$output = htmlspecialchars($output);
+	
+	return $output;
+}
 ?>

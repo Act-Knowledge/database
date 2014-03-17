@@ -2,6 +2,14 @@
 
 require("config.php");
 
+if(isset($_POST['submit']))
+{
+
+$username = Security($_POST['username'];
+$password = Security($_POST['password']; 
+$con->query("SELECT * FROM users WHERE username = '".$username."' AND password = '".$password."'");
+
+}
 ?>
 
 <!doctype html><!-- Act-Knowledge "mark-it" 
@@ -37,7 +45,7 @@ Laatste update: 2014-02-20 -->
 	<div class="wrapper">
 
 	<div id="main">
-		<form action="login.php">
+		<form action="" method="post">
 			<p>Naam:
 				<input type="text" name="username" size="15" maxlength="30" />
 			</p>
@@ -45,7 +53,7 @@ Laatste update: 2014-02-20 -->
 				<input type="password" name="password" size="15" maxlength="30" />
 			</p>
 
-			<button class="submit" name="submit" type="submit">Aanmelden</button>
+			<input class="submit" name="submit" type="submit" value="Aanmelden">
 		</form>
 
 
