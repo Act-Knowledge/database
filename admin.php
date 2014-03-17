@@ -52,6 +52,28 @@ Laatste update: 2014-02-20 -->
 			        <li><a href="#"><img src="img/add/plus.png" class="image">New article</a></li>
 			     </ul>
 			</nav>
+
+			<div class="columns">
+			<div class="col" id="one">
+				<img class="icon" src="img/services/icon1.png">
+				<h3 class"title">Maatwerk</h3>
+			</div><!-- end col-one -->
+
+			<div class="col" id="two">
+				<img class="icon" src="img/services/icon2.png">
+				<h3 class"title">Over ons</h3>
+			</div><!-- end col-two -->
+
+			<div class="col" id="three">
+				<img class="icon" src="img/services/icon3.png">
+				<h3 class"title">Producten</h3>
+			</div><!-- end col-three -->
+
+			<div class="col" id="four">
+				<img class="icon" src="img/services/icon4.png">
+				<h3 class"title">Contact</h3>
+			</div><!-- end col-four -->
+		</div><!-- end columns -->
 	</div>
 
 	</div><!-- end wrapper -->
