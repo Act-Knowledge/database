@@ -1,6 +1,6 @@
 <?php
- Session_start();
 
+error_reporting(E_ALL);
 
 //Database verbinding
 
@@ -44,5 +44,5 @@ require("./includes/functions.php");
 //Users class
 require("./includes/class.users.php");
 
-
+Session_start();
 ?>

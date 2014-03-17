@@ -2,8 +2,6 @@
 
 if(isset($_SESSION['userdata']))
 {
-$user = new JordyUser($_SESSION['username']);
-$_SESSION['userdata'] = $user;
 $logged_in = true;
 }
 else
