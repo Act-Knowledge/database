@@ -1,19 +1,20 @@
 <?php
 
-require("config.php");
+require("./includes/config.php");
 
 if(isset($_POST['submit']))
 {
 
 $username = Security($_POST['username']);
 $password = Jordyhash($_POST['password']); 
-$query = $mysqli->query("SELECT * FROM users WHERE username = '".$username."' AND password = '".$password."'");
+$query = $mysqli->query("SELECT * FROM users WHERE username = '".$username."' AND password = '".$password."' LIMIT 1");
 $count = $query->num_rows;
 
 if($count > 0)
 {
-echo "hij bestaat kut";
+
 }
+
 }
 ?>
 

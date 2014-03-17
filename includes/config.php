@@ -25,7 +25,7 @@ $mysqli = new mysqli($host,$dbuser,$dbpass,$dbname);
 
 return $mysqli;
 }
-
+// haald connectie op
 $mysqli = get_my_db();
 
 //connectie error?
@@ -36,20 +36,9 @@ if (mysqli_connect_error($con))
   }
 
   
-  function Security($input) {
-	$output = $input;
-	$mysqli = get_my_db();
-	$output = addslashes($output);
-	$output = mysqli_real_escape_string($mysqli,$output);
-	$output = htmlspecialchars($output);
-	
-	return $output;
-}
-
-
-function Jordyhash($string) {
-	$output = sha1($string);
-	
-	return $output;
-}
+  
+  
+  //Functies
+  
+ require("./includes/Functions.php");
 ?>

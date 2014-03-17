@@ -1,6 +1,6 @@
 <?php
 
-require("config.php");
+require("./includes/config.php");
 
 if(isset($_SESSION['gebruiker']) && isset($_SESSION['wachtwoord']))
 {
