@@ -15,13 +15,12 @@ if($count > 0)
 $user = new JordyUser($username);
 $_SESSION['userdata'] = $user;
 
-echo "hallo ".User::getUserData('username').", <br> Je bent ingelogt!";
+header('Location: admin.php');
 die();
 }
 else
 {
-header('Location: admin.php');
-die();
+$error = "Onjuist wachtwoord of gebruikersnaam"
 }
 
 }
