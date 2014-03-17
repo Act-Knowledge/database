@@ -38,43 +38,26 @@ Laatste update: 2014-02-20 -->
 	<div class="wrapper">
 
 	<div id="main">
-	<?php echo "<center>Welkom ".User::getUserData('username')." (ID: ".User::getUserData('id')."), In het allerbeste paneel ter wereld!<br><br></center>"; ?>
+	<?php echo "<center>Welkom ".User::getUserData('username').", In het allerbeste paneel ter wereld!<br><br></center>"; ?>
 			<div class="uploads">
 				<section class="load1"><img src="img/add/video.png" class="image"/></section>
 				<section class="load2"><img src="img/add/foto.png" class="image"></section>
 				<section class="load3"><img src="img/add/doc.png" class="image"></section>
+	
+				<div class="columns">
+					<div class="col" id="one">
+						<h3 class"title"><img class="icon" src="img/add/plus.png">Add video</h3>
+					</div><!-- end col-one -->
+
+					<div class="col" id="two">
+						<h3 class"title"><img class="icon" src="img/add/plus.png">Add foto</h3>
+					</div><!-- end col-two -->
+
+					<div class="col" id="three">
+						<h3 class"title"><img class="icon" src="img/add/plus.png">New article</h3>
+					</div><!-- end col-three -->
+				</div><!-- end columns -->
 			</div><!-- end uploads-->
-
-			<nav class="add">
-				<ul>
-			        <li><a href="#"><img src="img/add/plus.png" class="image">Add video</a></li>
-			        <li><a href="#"><img src="img/add/plus.png" class="image">Add foto</a></li>
-			        <li><a href="#"><img src="img/add/plus.png" class="image">New article</a></li>
-			     </ul>
-			</nav>
-
-			<div class="columns">
-			<div class="col" id="one">
-				<img class="icon" src="img/services/icon1.png">
-				<h3 class"title">Maatwerk</h3>
-			</div><!-- end col-one -->
-
-			<div class="col" id="two">
-				<img class="icon" src="img/services/icon2.png">
-				<h3 class"title">Over ons</h3>
-			</div><!-- end col-two -->
-
-			<div class="col" id="three">
-				<img class="icon" src="img/services/icon3.png">
-				<h3 class"title">Producten</h3>
-			</div><!-- end col-three -->
-
-			<div class="col" id="four">
-				<img class="icon" src="img/services/icon4.png">
-				<h3 class"title">Contact</h3>
-			</div><!-- end col-four -->
-		</div><!-- end columns -->
-	</div>
 
 	</div><!-- end wrapper -->
 
