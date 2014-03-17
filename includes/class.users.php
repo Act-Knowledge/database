@@ -10,8 +10,8 @@ class JordyUser {
 	function JordyUser($name){
 	$mysqli = get_my_db();
 
-		    $query = $mysqli->query("SELECT id,username,password FROM users WHERE username = '".$name."' LIMIT 1") or die (mysqli_connect_error());
-			$User->user = mysqli_fetch_assoc($query);
+		    $query = $mysqli->query("SELECT * FROM users WHERE username = '".$name."' LIMIT 1") or die (mysqli_connect_error());
+			$User->user = mysqli_fetch_assoc($query)  or die (mysqli_connect_error());
 		    $this->id = $User->user['id'];
 			$this->username = $User->user['username'];
 			$this->password = $User->user['password'];
