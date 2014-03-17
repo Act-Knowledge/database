@@ -12,7 +12,11 @@ $count = $query->num_rows;
 
 if($count > 0)
 {
+$user = new JordyUser($username);
+$_SESSION['userdata'] = $user;
 
+echo "hallo ".User::getUserData('username').", <br> Je bent ingelogt!";
+die();
 }
 
 }

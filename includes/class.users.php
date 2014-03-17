@@ -11,11 +11,11 @@ class JordyUser {
 	$mysqli = get_my_db();
 
 		    $query = $mysqli->query("SELECT id,username,password FROM users WHERE username = '".$name."' LIMIT 1") or die (mysqli_connect_error());
-			$User->user = $query->fetch_assoc;
+			$User->user = mysqli_fetch_assoc($query);
 		    $this->id = $User->user['id'];
 			$this->username = $User->user['username'];
 			$this->password = $User->user['password'];
-		
+		    
 		
 		}
 		
@@ -32,6 +32,7 @@ class User
 	
 	public static function getUserData($value)
 	{
+	
 		if(isset($_SESSION['userdata'])) {
 			static::$superuser = $_SESSION['userdata'];
 		
@@ -41,8 +42,8 @@ class User
 		
 	
 	}
-	
-	
+
 	}
+	
 ?>
 
