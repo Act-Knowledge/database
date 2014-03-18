@@ -74,6 +74,12 @@ Laatste update: 2014-02-20 -->
 				</span>
 			</div>
 		</nav>
+	
+				<!-- HTML for SEARCH BAR -->
+				<div class="search">
+					<label for="mysearch">Enter your search string here : </label> 
+					<input id="mysearch" type="search" placeholder="search">
+				</div>
 	</header><!-- end top-fixed -->
 
 	<div class="wrapper">
