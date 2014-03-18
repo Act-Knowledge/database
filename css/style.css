@@ -457,3 +457,55 @@ footer {
 	.search {
 		float: right;
 	}
+
+	/*Initialize*/
+ul#menu, ul#menu ul.sub-menu {
+    padding:0;
+    margin: 0;
+    list-style: none;
+}
+ul#menu li, ul#menu ul.sub-menu li {
+    list-style-type: none;
+    display: inline-block;
+    list-style: none;
+}
+/*Link Appearance*/
+ul#menu li a, ul#menu li ul.sub-menu li a {
+    text-decoration: none;
+    color: #fff;
+    background: #666;
+    padding: 5px;
+    display:inline-block;
+    list-style: none;
+    border-bottom: 1px solid #000;
+    width: 80px;
+}
+/*Make the parent of sub-menu relative*/
+ul#menu li {
+    position: relative;
+}
+/*sub menu*/
+ul#menu li ul.sub-menu {
+    display:none;
+    position: absolute;
+    top: 57px;
+    left: 0;
+    width: 80px;
+}
+ul#menu li:hover ul.sub-menu {
+    display:block;
+}
+
+/*-------------[zoekresultaten]-------------*/
+	.rij1-1 {
+		width:30%;
+		height:auto;
+		float: left;
+		margin-right: 5%;
+	} 
+
+	.rij2-2 {
+		width:65%;
+		height:auto;
+		float:left;
+	}
