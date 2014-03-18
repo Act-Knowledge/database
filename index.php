@@ -17,14 +17,12 @@
 				</span>
 				
 				<!-- HTML for SEARCH BAR -->
-				<div id="tfheader">
-					<form id="tfnewsearch" method="get" action="http://www.google.com">
-					        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-					</form>
-				<div class="tfclear"></div>
+				<div class="search">
+					<label for="mysearch">Enter your search string here : </label> 
+					<input id="mysearch" type="search" placeholder="search">
 				</div>
 
-			</div><!-- end top-left -->
+				</div><!-- end top-left -->
 
 			<div class="top-right">
 				<span class="optie-icon">
