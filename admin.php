@@ -10,14 +10,15 @@ require("./loginbeveiliging.php");
 	<div id="main">
 	<?php echo "<center>Welkom ".User::getUserData('username').", In het allerbeste paneel ter wereld!<br><br></center>"; ?>
 			<div class="uploads">
+			<center>
 				<section class="load1"><img src="img/add/video.png" class="image"/></section>
 				<section class="load2"><img src="img/add/foto.png" class="image"></section>
 				<section class="load3"><img src="img/add/doc.png" class="image"></section>
-	
+	</center>
 				<div class="columns">
-					<div class="col" id="one">
+					<a href="./toevoegen.php"><div class="col" id="one">
 						<h3 class"title"><img class="icon" src="img/add/plus.png">Add video</h3>
-					</div><!-- end col-one -->
+					</div><!-- end col-one --></a>
 
 					<div class="col" id="two">
 						<h3 class"title"><img class="icon" src="img/add/plus.png">Add foto</h3>

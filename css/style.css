@@ -295,7 +295,7 @@ float: right;
   padding-top: 120px;
   width: 100%;
   height: 100px;
-  margin: auto;
+  margin-left: 330px;
   z-index: 20;
 }
 
@@ -304,6 +304,7 @@ div.col {
   width: 200px;
   height: 230px;
   float:left;
+    margin-left: 85px;
   -webkit-transition: height .2s;
 }
 
@@ -311,19 +312,16 @@ div#one {
   background: url('../img/col.png');
   margin-left: 1px;
   margin-right: 6px;
-  background: grey;
 }
 
 div#two {
   background: url('../img/col.png');
   margin-right: 6px;
-   background: #f8f8f8;
 }
 
 div#three {
   background: url('../img/col.png');
   margin-right: 6px;
-  background: grey;
 }
 
 div#four {
