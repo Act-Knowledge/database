@@ -1,63 +1,63 @@
 <?php
 
-require("./includes/config.php");
+require("./template/header.php");
+if(isset($_POST['submit']))
+{
+$titel = Security($_POST['title']);
+$cata = Security($_POST['cata']);
+$bericht = Security($_POST['bericht']);
+$afb = Security($_POST['afbeelding']);
+$vid = Security($_POST['vidlink']);
 
+if(!trim($titel) || !trim($bericht))
+{
+
+$error = "vul alles goed in!";
+
+}
+else
+{
+
+$mysqli->query("INSERT INTO tuts (titel,bericht,type,videolink,afbeelding,auteur) VALUES ('".$titel."','".$bericht."','".$cata."','".$vid."','".$afb."','".User::getUserData("username")."')") OR die("mysql_error");
+$error = "Succesvol toegevoegd!";
+
+}
+
+}
 ?>
-
-<!doctype html><!-- Act-Knowledge "mark-it" 
-Laatste update: 2014-02-20 -->
-<html>
-<head>
-	<meta charset="utf-8">
-	<!-- stylesheet -->
-	<title>Mark-it</title>
-	<link rel="stylesheet" href="css/style.css" />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-	<link rel="icon" type="img/ico" href="img/web-icons/favicon.gif">
-</head>
-<body>	
-	<header class="top-fixed">
-		<nav class="menu">
-			<div class="top-left">
-				<span class="menu-icon">
-					<img class="top" src="img/icons/mnu-hover.png" />
-					<img class="bottom" src="img/icons/mnu.png" />
-				</span>
-
-			</div><!-- end top-left -->
-
-			<div class="top-right">
-				<span class="optie-icon">
-					<img class="before" src="img/icons/opties-hover.png" />
-					<img class="after" src="img/icons/opties.png" />
-				</span>
-			</div>
-		</nav>
-	</header><!-- end top-fixed -->
 
 	<div class="wrapper">
 
 	<div id="main">
+	
+	
 			<div class="form">
-				<form name="web-form" action="mailto:youremail@email.com" method="post">
-					<input type="text" name="title" size="70">
+			
+					<?php if(isset($error))
+					{
+					
+					echo "<br><center><b>".$error."</b></center><br>";
+					}
+					?>
+					
+			<form action="toevoegen.php" method="post">
+			
+					<input type="text" name="title" size="70" placeholder="Titel hier">
 
-					<select>
-						<option value="html">HTML</option>
-						<option value="css">CSS</option>
-						<option value="php">PHP</option>
-						<option value="jquery">jQuery</option>
+                   <select name="cata">
+						<option value="1">HTML</option>
+						<option value="2">CSS</option>
+						<option value="3">PHP</option>
+						<option value="4">jQuery</option>
 					</select>
 
-					<textarea cols="90" rows="16" name="message"></textarea>
+					<textarea cols="90" rows="16" name="bericht"></textarea>
 
-					<input type="checkbox" name="add" value="foto">Upload foto<br>
-					<input type="checkbox" name="add" value="video">Upload video
-
-					<input type="file" name="uploadField" />
+					<input type="text" name="afbeelding" size="70" placeholder="Afbeelding link hier">
+						<input type="text" name="vidlink" size="70" placeholder="Video link hier">
 					
 					<div class="enter">
-					<input type="submit" value="submit">
+					<input type="submit" name="submit" value="submit">
 					<input type="reset">
 					</div>
 				</form>

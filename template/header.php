@@ -17,13 +17,13 @@ require("./includes/config.php");
 		<nav class="menu">
 			<div class="top-left">
 				<span class="menu-icon">
-					<img class="top" src="img/icons/mnu-hover.png">
-					<img class="bottom" src="img/icons/mnu.png">
+				<a href="./index.php">	<img class="top" src="img/icons/mnu-hover.png">
+					<img class="bottom" src="img/icons/mnu.png"></a>
 				</span>
 				
 				<!-- HTML for SEARCH BAR -->
 				<div class="search">
-					<label for="mysearch">Enter your search string here : </label> 
+					<label for="mysearch">Zoeken: </label> 
 					<input id="mysearch" type="search" placeholder="search">
 				</div>
 

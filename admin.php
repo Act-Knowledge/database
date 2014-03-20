@@ -19,13 +19,13 @@ require("./loginbeveiliging.php");
 					<a href="./toevoegen.php"><div class="col" id="one">
 						<h3 class"title"><img class="icon" src="img/add/plus.png">Add video</h3>
 					</div><!-- end col-one --></a>
-
+<a href="./toevoegen.php">
 					<div class="col" id="two">
-						<h3 class"title"><img class="icon" src="img/add/plus.png">Add foto</h3>
+						<h3 class"title"><img class="icon" src="img/add/plus.png">Add foto</h3></a>
 					</div><!-- end col-two -->
-
+<a href="./toevoegen.php">
 					<div class="col" id="three">
-						<h3 class"title"><img class="icon" src="img/add/plus.png">New article</h3>
+						<h3 class"title"><img class="icon" src="img/add/plus.png">New article</h3></a>
 					</div><!-- end col-three -->
 				</div><!-- end columns -->
 			</div><!-- end uploads-->
