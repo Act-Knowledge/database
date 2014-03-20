@@ -1,3 +1,8 @@
+<?php
+
+require("./includes/config.php");
+
+?>
 <html><head>
 	<meta charset="utf-8">
 	<!-- stylesheet -->
@@ -27,7 +32,12 @@
 			<div class="top-right">
 				<span class="optie-icon">
 					<img class="before" src="img/icons/opties-hover.png">
-					<img class="after" src="img/icons/opties.png">
+					<?php if(!isset($_SESSION['userdata']))
+					{
+					echo'<a href="/inloggen.php"><img class="after" src="img/icons/opties.png"></a>';
+					}
+					?>
+				
 				</span>
 			</div>
 		</nav>
@@ -37,34 +47,64 @@
 
 	<div class="wrapper">
 		<div class="rij1">
+		
+		
+		<?php
+		$sql = $mysqli->query("SELECT * FROM tuts WHERE type = 1 ORDER by titel");
+		
+		while($row = mysqli_fetch_object($sql))
+		{
+		?>
 			<div class="tutorials">
-		 		<h2>titel</h2>
-		 		<section class="image"></section>
-		 		<section class="tekst">Lorem ipsum dolor sit amet, elit di consectetur adipiscing elit.</section>
+		 		<h2><?php echo $row->titel; ?></h2>
+		 		<div class="image"><center><img src="<?php echo $row->afbeelding; ?>" style="width:200px;" alt="<?php echo $row->titel; ?>"></center>	</div>
+		 		<section class="tekst"><?php echo $row->bericht; ?></section><br>
+				<section style="text-align:right;">Door: <b><?php echo $row->auteur; ?></b></section>
+		
 			</div>
-			<div class="tutorials">
-		 		<h2>titel</h2>
-			</div>
+			
+			<?php
+			}
+			?>
+			
+			
+			
 		</div>
 		<div class="rij2">
+			
+		<?php
+		$sql = $mysqli->query("SELECT * FROM tuts WHERE type = 2 ORDER by titel");
+		
+		while($row = mysqli_fetch_object($sql))
+		{
+		?>
+		
 			<div class="fotos">
-		 		<h2>titel</h2>
-		 		<section class="image"></section>
-		 		<section class="tekst">Lorem ipsum dolor sit amet, elit di consectetur adipiscing elit.</section>
+		<h2><?php echo $row->titel; ?></h2>
+		 		<div class="image"><center><img src="<?php echo $row->afbeelding; ?>" style="width:200px;" alt="<?php echo $row->titel; ?>"></center>	</div>
+		 		<section class="tekst"><?php echo $row->bericht; ?></section><br>
+				<section style="text-align:right;">Door: <b><?php echo $row->auteur; ?></b></section>
 			</div>
-			<div class="fotos">
-		 		<h2>titel</h2>
-			</div>
-		</div>
+			
+			<?php
+			}
+			?></div>
 		<div class="rij3">
+		<?php
+		$sql = $mysqli->query("SELECT * FROM tuts WHERE type = 3 ORDER by titel");
+		
+		while($row = mysqli_fetch_object($sql))
+		{
+		?>
 			<div class="videos">
-		 		<h2>titel</h2>
-		 		<section class="image"></section>
-		 		<section class="tekst">Lorem ipsum dolor sit amet, elit di consectetur adipiscing elit.</section>
+		 			<h2><?php echo $row->titel; ?></h2>
+		     <iframe width="420" height="315" src="<?php echo $row->videolink;?>" frameborder="0" allowfullscreen></iframe>
+		 		<section class="tekst"><?php echo $row->bericht; ?></section><br>
+				<section style="text-align:right;">Door: <b><?php echo $row->auteur; ?></b></section>
 			</div>
-			<div class="videos">
-		 		<h2>titel</h2>
-			</div>
+			<?php
+			}
+			?>
 		</div>
 	</div><!-- end wrapper -->
 
