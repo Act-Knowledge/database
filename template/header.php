@@ -13,17 +13,19 @@ require("./includes/config.php");
 
 </head>
 <body>	
+
 	<header class="top-fixed">
 		<nav class="menu">
+		<img class="banner" src="img/web-icons/header.PNG">
 			<div class="top-left">
 				<span class="menu-icon">
-				<a href="./index.php">	<img class="top" src="img/icons/mnu-hover.png">
-					<img class="bottom" src="img/icons/mnu.png"></a>
+				<a href="./index.php">	<img class="top" src="img/icons/mnu.png">
+					<img class="bottom" src="img/icons/mnu-hover.png"></a>
 				</span>
 				
 				<!-- HTML for SEARCH BAR -->
 				<div class="search">
-					<label for="mysearch">Zoeken: </label> 
+					<label for="mysearch"><cite>Zoeken:</cite></label> 
 					<input id="mysearch" type="search" placeholder="search">
 				</div>
 
@@ -33,13 +35,13 @@ require("./includes/config.php");
 				<span class="optie-icon">
 				<?php if(!isset($_SESSION['userdata']))
 					{
-					echo'<img class="before" src="img/icons/opties-hover.png">';
-					echo'<a href="./inloggen.php"><img class="after" src="img/icons/opties.png"></a>';
+					echo'<img class="before" src="img/icons/opties.png">';
+					echo'<a href="./inloggen.php"><img class="after" src="img/icons/opties-hover.png"></a>';
 					}
 					else
 					{
-					echo'<img class="before" src="img/icons/opties-hover.png">';
-					echo'<a href="./admin.php"><img class="after" src="img/icons/opties.png"></a>';
+					echo'<img class="before" src="img/icons/opties.png">';
+					echo'<a href="./admin.php"><img class="after" src="img/icons/opties-hover.png"></a>';
 					}
 					?>
 				
