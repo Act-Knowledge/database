@@ -10,38 +10,38 @@ require("./template/header.php");
 		 		<section class="tekst">
 		 			<dl>
 		 				<dt><b>jQuery</b></dt>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
 		 			</dl>
 		 			<br>
 		 			<dl>
 		 				<dt><b>PHP</b></dt>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
 		 			</dl>
 		 			<br>
 		 			<dl>
 		 				<dt><b>HTML</b></dt>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
 		 			</dl>
 		 			<br>
 		 			<dl>
 		 				<dt><b>CSS</b></dt>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
 		 			</dl>
 		 		</section>
 			</div>
