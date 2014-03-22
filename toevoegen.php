@@ -1,6 +1,9 @@
 <?php
 
 require("./template/header.php");
+
+require("./loginbeveiliging.php");
+
 if(isset($_POST['submit']))
 {
 $titel = Security($_POST['title']);
