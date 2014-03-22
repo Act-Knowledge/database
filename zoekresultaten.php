@@ -22,6 +22,8 @@ require("./template/header.php");
 			
 			$sql = $mysqli->query("SELECT * FROM tuts where titel like '%".$zoek."%'") or die('error');
 	        
+			if(mysqli_num_rows($sql) > 0)
+			{
 			
 				while($row = mysqli_fetch_object($sql))
 				{
@@ -91,10 +93,19 @@ require("./template/header.php");
 				echo'</dl>';
 		 		echo'</section>';
 				}
+				
 				}
 				else{
 				echo "geen zoekresultaten";
 				}
+				}
+				else{
+				echo "geen zoekresultaten";
+				}
+				}
+				else
+				{
+				echo "Geen zoekwoord opgegeven!";
 				}
 				?>
 				
@@ -103,14 +114,27 @@ require("./template/header.php");
 		</div>
 		<div class="rij2-2">
 			<div class="fotos">
-		 		<h2>Titel</h2>
-		 		<section class="image"></section>
-		 		<section class="tekst">Lorem ipsum dolor sit amet, elit di consectetur adipiscing elit.</section>
+			<?php if(isset($_GET['id']))
+			{
+			    $id = Security($_GET['id']);
+				$sql = $mysqli->query("SELECT * FROM tuts WHERE id = '".$id."' LIMIT 1");
+				$row = mysqli_fetch_object($sql);
+		 		echo'<h2>'.$row->titel.'</h2>';
+		 		echo'<div class="image"><center><img src="'.$row->afbeelding.'" style="width:200px;" alt="'.$row->titel.'"></center>	</div><br>';
+		 		echo'<section class="tekst">'.$row->bericht.'</section>';
+			}
+			else
+			{
+			
+			echo'<h2>Titel</h2>';
+		 		
+		 		echo'<section class="tekst">Nog geen bericht aangeklikt!</section>';
+			}
+			?>
 			</div>
-			<div class="fotos">
-		 		<h2>Titel</h2>
+			
 			</div>
-		</div>
+		
 	</div><!-- end wrapper -->
 
 	<footer></footer>
