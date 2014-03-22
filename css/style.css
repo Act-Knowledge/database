@@ -34,7 +34,6 @@ a:hover {color: red;}
 	height: 56px;
 	background-color: rgba(192,0,0,1);
 	border-bottom: solid 2px rgba(21,24,26,0.5);
-	position: fixed;
 	z-index: 40;
 	top: 0;
 }

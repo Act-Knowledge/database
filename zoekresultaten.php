@@ -2,48 +2,103 @@
 
 require("./template/header.php");
 
+
 ?>
+
 	<div class="wrapper">
 		<div class="rij1-1">
 			<div class="tutorials">
 		 		<h3>Zoekresultaten</h3>
-		 		<section class="tekst">
-		 			<dl>
-		 				<dt><b>jQuery</b></dt>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 			</dl>
-		 			<br>
-		 			<dl>
-		 				<dt><b>PHP</b></dt>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 			</dl>
-		 			<br>
-		 			<dl>
-		 				<dt><b>HTML</b></dt>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 			</dl>
-		 			<br>
-		 			<dl>
-		 				<dt><b>CSS</b></dt>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 				<dd>Tag</dd>
-		 			</dl>
-		 		</section>
+				
+
+		 		<?php 
+				
+				if(isset($_GET['submit']))
+             {
+			 
+            $zoek = Security($_GET['zoek']);
+            if(trim($zoek))
+            {
+			
+			$sql = $mysqli->query("SELECT * FROM tuts where titel like '%".$zoek."%'") or die('error');
+	        
+			
+				while($row = mysqli_fetch_object($sql))
+				{
+				
+				echo'<section class="tekst">';
+				
+				echo'<dl>';
+		 		echo'<dt><b>jQuery</b></dt>';
+				if($row->type == '4')
+				{
+		 			
+		 				echo'<dd><a href="./zoekresultaten.php?zoek='.$zoek.'&submit=zoeken&id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 			
+				}
+				else
+				{
+				echo "Geen resultaten";
+				}
+				echo'</dl>';
+		 		echo'<br>';
+				
+				
+               echo'<dl>';
+		 		echo'<dt><b>PHP</b></dt>';
+				if($row->type == '3')
+				{
+		 			
+		 				echo'<dd><a href="./zoekresultaten.php?zoek='.$zoek.'&submit=zoeken&id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 			
+				}
+				else
+				{
+				echo "Geen resultaten";
+				}
+				echo'</dl>';
+		 		echo'<br>';
+				
+				
+				echo'<dl>';
+		 		echo'<dt><b>HTML</b></dt>';
+				if($row->type == '1')
+				{
+		 			
+		 				echo'<dd><a href="./zoekresultaten.php?zoek='.$zoek.'&submit=zoeken&id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 			
+				}
+				else
+				{
+				echo "Geen resultaten";
+				}
+				echo'</dl>';
+		 		echo'<br>';
+				
+				
+					echo'<dl>';
+		 		echo'<dt><b>CSS</b></dt>';
+				if($row->type == '2')
+				{
+		 			
+		 				echo'<dd><a href="./zoekresultaten.php?zoek='.$zoek.'&submit=zoeken&id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 				
+				}
+				else
+				{
+				echo "Geen resultaten";
+				}
+				echo'</dl>';
+		 		echo'</section>';
+				}
+				}
+				else{
+				echo "geen zoekresultaten";
+				}
+				}
+				?>
+				
+				
 			</div>
 		</div>
 		<div class="rij2-2">

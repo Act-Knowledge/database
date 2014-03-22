@@ -24,11 +24,15 @@ require("./includes/config.php");
 				</span>
 				
 				<!-- HTML for SEARCH BAR -->
+				<form action="./zoekresultaten.php" method="get">
 				<div class="search">
+			
 					<label for="mysearch"><cite>Zoeken:</cite></label> 
-					<input id="mysearch" type="search" placeholder="search">
+					<input id="mysearch" name="zoek" type="search" placeholder="search">
+					<input type = "submit" name="submit" id="submit" value="zoeken">
+			    
 				</div>
-
+                </form>
 				</div><!-- end top-left -->
 
 			<div class="top-right">

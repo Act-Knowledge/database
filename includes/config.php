@@ -25,7 +25,7 @@ $mysqli = new mysqli($host,$dbuser,$dbpass,$dbname);
 
 return $mysqli;
 }
-// haald connectie op
+// voerd connectie functie uit.
 $mysqli = get_my_db();
 
 //connectie error?
