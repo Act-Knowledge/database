@@ -9,6 +9,7 @@ require("./template/header.php");
 		<div class="rij1-1">
 			<div class="tutorials">
 		 		<h3>Zoekresultaten</h3>
+<<<<<<< HEAD
 				
 
 		 		<?php 
@@ -99,6 +100,45 @@ require("./template/header.php");
 				?>
 				
 				
+=======
+		 		<section class="tekst">
+		 			<dl>
+		 				<dt><b>jQuery</b></dt>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 			</dl>
+		 			<br>
+		 			<dl>
+		 				<dt><b>PHP</b></dt>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 			</dl>
+		 			<br>
+		 			<dl>
+		 				<dt><b>HTML</b></dt>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 			</dl>
+		 			<br>
+		 			<dl>
+		 				<dt><b>CSS</b></dt>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 				<dd><a href="#">Tag</a></dd>
+		 			</dl>
+		 		</section>
+>>>>>>> 221c4ac91aa8e82063e8edff98e037a554c30d0e
 			</div>
 		</div>
 		<div class="rij2-2">
