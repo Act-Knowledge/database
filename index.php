@@ -38,7 +38,7 @@ else
 $textdisplaylist = '<div>'.$row->bericht.'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
 }
 
-				echo $textdisplaylist; ?></section><br>
+				echo $textdisplaylist; ?></section>
 				<section style="text-align:right;">Door: <b><?php echo $row->auteur; ?></b></section>
 		
 			</div>
@@ -82,7 +82,7 @@ else
 $textdisplaylist = '<div>'.$row->bericht.'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
 }
 
-				echo $textdisplaylist; ?></section><br>
+				echo $textdisplaylist; ?></section>
 				<section style="text-align:right;">Door: <b><?php echo $row->auteur; ?></b></section>
 			</div>
 			
@@ -119,7 +119,7 @@ else
 $textdisplaylist = '<div>'.$row->bericht.'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
 }
 
-				echo $textdisplaylist; ?></section><br>
+				echo $textdisplaylist; ?></section>
 				<section style="text-align:right;">Door: <b><?php echo $row->auteur; ?></b></section>
 			</div>
 			<?php

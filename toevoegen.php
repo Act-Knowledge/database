@@ -54,7 +54,16 @@ $error = "Succesvol toegevoegd!";
 						<option value="4">jQuery</option>
 					</select>
 
-					<textarea cols="90" rows="16" name="bericht"></textarea>
+					<? if (file_exists("ckeditor/ckeditor.js")): ?>
+<textarea name="bericht" id="descr" style="width: 800px; height: 400px" rows="20"><? echo $descr; ?></textarea>
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+CKEDITOR.replace( 'descr',
+    {
+     resize_enabled: true
+    });
+</script>
+<? endif; ?>
 
 					<input type="text" name="afbeelding" size="70" placeholder="Afbeelding link hier">
 						<input type="text" name="vidlink" size="70" placeholder="Video link hier">
