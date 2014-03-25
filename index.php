@@ -19,7 +19,7 @@ require("./template/header.php");
 				  <?php 
 			if(trim($row->videolink)) 
 			{
-			echo '<iframe width="532" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
+			echo '<iframe width="100%" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
 			}
 			else
 			{
@@ -65,7 +65,7 @@ $textdisplaylist = '<div>'.$row->bericht.'<br><a href="./article.php?id='.$row->
 		 		  <?php 
 				if(trim($row->videolink)) 
 			{
-			echo '<iframe width="532" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
+			echo '<iframe width="100%" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
 			}
 			else
 			{
@@ -101,7 +101,7 @@ $textdisplaylist = '<div>'.$row->bericht.'<br><a href="./article.php?id='.$row->
 		    <?php 
 				if(trim($row->videolink)) 
 			{
-			echo '<iframe width="532" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
+			echo '<iframe width="100%" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
 			}
 			else
 			{
