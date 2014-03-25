@@ -19,7 +19,7 @@ require("./template/header.php");
 				  <?php 
 			if(trim($row->videolink)) 
 			{
-			echo '<iframe width="420" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
+			echo '<iframe width="532" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
 			}
 			else
 			{
@@ -28,7 +28,17 @@ require("./template/header.php");
 			?>
 				
 				
-		 		<section class="tekst"><?php echo $row->bericht; ?></section><br>
+		 		<section class="tekst"><?php
+if(strlen($row->bericht) > 50)
+{
+$textdisplaylist = '<div>'.substr($row->bericht,0,50).'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
+}
+else
+{
+$textdisplaylist = '<div>'.$row->bericht.'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
+}
+
+				echo $textdisplaylist; ?></section><br>
 				<section style="text-align:right;">Door: <b><?php echo $row->auteur; ?></b></section>
 		
 			</div>
@@ -55,14 +65,24 @@ require("./template/header.php");
 		 		  <?php 
 				if(trim($row->videolink)) 
 			{
-			echo '<iframe width="420" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
+			echo '<iframe width="532" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
 			}
 			else
 			{
 			echo '<div class="image"><center><img src="'.$row->afbeelding.'" style="width:200px;" alt="'.$row->titel.'"></center>	</div>';
 			}
 			?>
-			<section class="tekst"><?php echo $row->bericht; ?></section><br>
+			<section class="tekst"><?php
+if(strlen($row->bericht) > 50)
+{
+$textdisplaylist = '<div>'.substr($row->bericht,0,50).'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
+}
+else
+{
+$textdisplaylist = '<div>'.$row->bericht.'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
+}
+
+				echo $textdisplaylist; ?></section><br>
 				<section style="text-align:right;">Door: <b><?php echo $row->auteur; ?></b></section>
 			</div>
 			
@@ -81,7 +101,7 @@ require("./template/header.php");
 		    <?php 
 				if(trim($row->videolink)) 
 			{
-			echo '<iframe width="420" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
+			echo '<iframe width="532" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe>';
 			}
 			else
 			{
@@ -89,7 +109,17 @@ require("./template/header.php");
 			}
 			?>
 			
-		 		<section class="tekst"><?php echo $row->bericht; ?></section><br>
+		 		<section class="tekst"><?php
+if(strlen($row->bericht) > 50)
+{
+$textdisplaylist = '<div>'.substr($row->bericht,0,50).'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
+}
+else
+{
+$textdisplaylist = '<div>'.$row->bericht.'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
+}
+
+				echo $textdisplaylist; ?></section><br>
 				<section style="text-align:right;">Door: <b><?php echo $row->auteur; ?></b></section>
 			</div>
 			<?php
