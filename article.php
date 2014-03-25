@@ -102,9 +102,9 @@ require("./template/header.php");
 				}
 				
 				echo'</dl>';
-		 		echo'</section>';
+		 		
 				}
-				
+				echo'</section>';
 				}
 				
 				
