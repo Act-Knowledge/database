@@ -8,7 +8,7 @@ if(isset($_POST['submit']))
 {
 $titel = Security($_POST['title']);
 $cata = Security($_POST['cata']);
-$bericht = Security($_POST['bericht']);
+$bericht = $_POST['bericht'];
 $afb = Security($_POST['afbeelding']);
 $vid = Security($_POST['vidlink']);
 

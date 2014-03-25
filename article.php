@@ -106,9 +106,7 @@ require("./template/header.php");
 				}
 				
 				}
-				else{
-				echo "geen zoekresultaten";
-				}
+				
 				
 				?>
 				
@@ -133,7 +131,7 @@ require("./template/header.php");
 			echo '<div class="image"><center><img src="'.$row->afbeelding.'" style="width:200px;" alt="'.$row->titel.'"></center>	</div>';
 			}
 		
-		 		echo'<section class="tekst">'.$row->bericht.'</section>';
+		 		echo'<div style="margin-left:100px;"><section class="tekst">'.$row->bericht.'</section></div>';
 			}
 			else
 			{

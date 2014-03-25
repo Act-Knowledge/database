@@ -120,8 +120,15 @@ require("./template/header.php");
 				$sql = $mysqli->query("SELECT * FROM tuts WHERE id = '".$id."' LIMIT 1");
 				$row = mysqli_fetch_object($sql);
 		 		echo'<h2>'.$row->titel.'</h2>';
-		 		echo'<div class="image"><center><img src="'.$row->afbeelding.'" style="width:200px;" alt="'.$row->titel.'"></center>	</div><br>';
-		 		echo'<section class="tekst">'.$row->bericht.'</section>';
+		 	if(trim($row->videolink)) 
+			{
+			echo '<center><iframe width="532" height="315" src="'.$row->videolink.'" frameborder="0" allowfullscreen></iframe></center>';
+			}
+			else
+			{
+			echo '<div class="image"><center><img src="'.$row->afbeelding.'" style="width:200px;" alt="'.$row->titel.'"></center>	</div>';
+			}
+		 			echo'<div style="margin-left:100px;"><section class="tekst">'.$row->bericht.'</section></div>';
 			}
 			else
 			{

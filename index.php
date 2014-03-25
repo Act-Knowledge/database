@@ -28,17 +28,17 @@ require("./template/header.php");
 			?>
 				
 				
-		 		<section class="tekst"><?php
+		 		<p><section class="tekst"><?php
 if(strlen($row->bericht) > 50)
 {
-$textdisplaylist = '<div>'.substr($row->bericht,0,50).'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
+$textdisplaylist = '<div>'.substr($row->bericht,0,50).'...<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
 }
 else
 {
 $textdisplaylist = '<div>'.$row->bericht.'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
 }
 
-				echo $textdisplaylist; ?></section>
+				echo $textdisplaylist; ?></section></p>
 				<section style="text-align:right;">Door: <b><?php echo $row->auteur; ?></b></section>
 		
 			</div>
@@ -75,7 +75,7 @@ $textdisplaylist = '<div>'.$row->bericht.'<br><a href="./article.php?id='.$row->
 			<section class="tekst"><?php
 if(strlen($row->bericht) > 50)
 {
-$textdisplaylist = '<div>'.substr($row->bericht,0,50).'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
+$textdisplaylist = '<div>'.substr($row->bericht,0,50).'...<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
 }
 else
 {
@@ -112,7 +112,7 @@ $textdisplaylist = '<div>'.$row->bericht.'<br><a href="./article.php?id='.$row->
 		 		<section class="tekst"><?php
 if(strlen($row->bericht) > 50)
 {
-$textdisplaylist = '<div>'.substr($row->bericht,0,50).'<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
+$textdisplaylist = '<div>'.substr($row->bericht,0,50).'...<br><a href="./article.php?id='.$row->id.'">Lees meer >></a></div>';
 }
 else
 {
