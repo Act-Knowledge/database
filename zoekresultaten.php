@@ -50,7 +50,7 @@ require("./template/header.php");
 				  
 				
 		 			
-		 		    echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 		    echo'<dd><a href="./zoekresultaten.php?id='.$row->id.'&zoek='.$zoek.'&submit=1">'.$row->titel.'</a></dd>';
 		 			
 				
 				
@@ -84,8 +84,8 @@ require("./template/header.php");
 				  
 				
 		 			
-		 		    echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
-		 			
+		 		    echo'<dd><a href="./zoekresultaten.php?id='.$row->id.'&zoek='.$zoek.'&submit=1">'.$row->titel.'</a></dd>';
+		 		
 				
 				
 				    echo'</dl>';
@@ -119,8 +119,8 @@ require("./template/header.php");
 				  
 				
 		 			
-		 		    echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
-		 			
+		 		    echo'<dd><a href="./zoekresultaten.php?id='.$row->id.'&zoek='.$zoek.'&submit=1">'.$row->titel.'</a></dd>';
+		 		
 				
 				
 				    echo'</dl>';
@@ -153,8 +153,8 @@ require("./template/header.php");
 				  
 				
 		 			
-		 		    echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
-		 			
+		 		    echo'<dd><a href="./zoekresultaten.php?id='.$row->id.'&zoek='.$zoek.'&submit=1">'.$row->titel.'</a></dd>';
+		 		
 				
 				
 				    echo'</dl>';
