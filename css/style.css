@@ -402,7 +402,7 @@ footer {
 	-webkit-column-count:1; /* Chrome, Safari, Opera */
 	-moz-column-count:1; /* Firefox */
 	column-count:1;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	border: 2px solid #000000;
 	padding: 3px;
 	background-color: white;
@@ -412,7 +412,7 @@ footer {
 	-webkit-column-count:1; /* Chrome, Safari, Opera */
 	-moz-column-count:1; /* Firefox */
 	column-count:1;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	border: 2px solid #000000;
 	padding: 3px;
 	background-color: white;
@@ -422,7 +422,7 @@ footer {
 	-webkit-column-count:1; /* Chrome, Safari, Opera */
 	-moz-column-count:1; /* Firefox */
 	column-count:1;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	border: 2px solid #000000;
 	padding: 3px;
 	background-color: white;
