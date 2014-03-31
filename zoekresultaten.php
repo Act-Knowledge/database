@@ -8,7 +8,7 @@ require("./template/header.php");
 	<div class="wrapper">
 		<div class="rij1-1">
 			<div class="tutorials">
-		 		<h3>Zoekresultaten</h3>
+		 		<h2>Zoekresultaten</h2>
 				
 
 		 		<?php 

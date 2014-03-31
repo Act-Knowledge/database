@@ -8,7 +8,7 @@ require("./loginbeveiliging.php");
 	<div class="wrapper">
 	<div class="rijadmin">
 			<div class="tutorials">
-		 		<h3>Archief</h3>
+		 	<h2> Verander bericht</h2>
 				
 
 		 		<?php 
