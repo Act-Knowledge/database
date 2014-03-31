@@ -43,7 +43,7 @@ $error = "Succesvol toegevoegd!";
 					}
 					?>
 					
-			<form action="toevoegen.php" method="post">
+			<form action="./toevoegen.php" method="post">
 			
 					<input type="text" name="title" size="70" placeholder="Titel hier">
 
@@ -55,7 +55,7 @@ $error = "Succesvol toegevoegd!";
 					</select>
 
 					<? if (file_exists("ckeditor/ckeditor.js")): ?>
-<textarea name="bericht" id="descr" style="width: 800px; height: 400px" rows="20"><? echo $descr; ?></textarea>
+<textarea name="bericht" id="descr" style="width: 800px; height: 400px" rows="20"></textarea>
 <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 <script type="text/javascript">
 CKEDITOR.replace( 'descr',
@@ -72,7 +72,7 @@ CKEDITOR.replace( 'descr',
 					<input type="submit" name="submit" value="submit">
 					<input type="reset">
 					</div>
-				</form>
+				</form><br>
 			</div> <!-- end post-form -->
 	</div>
 

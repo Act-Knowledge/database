@@ -4,6 +4,40 @@ require("./template/header.php");
 
 require("./loginbeveiliging.php");
 
+
+
+
+if(isset($_POST['submit']))
+{
+$titel = Security($_POST['title']);
+$cata = Security($_POST['cata']);
+$bericht = $_POST['bericht'];
+$afb = Security($_POST['afbeelding']);
+$vid = Security($_POST['vidlink']);
+$id = Security($_POST['id']);
+if(!trim($titel) || !trim($bericht) || !trim($id))
+{
+
+$error = "vul alles goed in!";
+
+}
+else
+{
+if($_POST['submit'] == "Verwijder")
+{
+$mysqli->query("DELETE FROM tuts WHERE id = '".$id."'");
+echo ' <script> location.replace("./admin.php"); </script>';
+die();
+}
+else
+{
+$mysqli->query("UPDATE tuts SET titel = '".$titel."', bericht = '".$bericht."', type = '".$cata."', videolink = '".$vid."', afbeelding = '".$afb."', auteur = '".User::getUserData("username")."' WHERE id = '".$id."'") OR die("mysql_error");
+$error = "Succesvol Aangepast!";
+}
+}
+
+}
+
 if(!isset($_GET['id']))
 {
 die('Geen geldig id');
@@ -43,9 +77,10 @@ $row = mysqli_fetch_object($sql);
 					}
 					?>
 					
-			<form action="verander.php" method="post">
+			<form action="./veranderen.php?id=<?php echo $row->id; ?>" method="post">
 			
 					<input type="text" name="title" size="70" value="<?php echo $row->titel; ?>">
+					<input type="hidden" name="id" value="<?php echo $row->id; ?>">
 
                    <select name="cata">
 				   <?php
@@ -104,10 +139,12 @@ CKEDITOR.replace( 'descr',
 						
 					
 					<div class="enter">
-					<input type="submit" name="submit" value="submit">
+					<input type="submit" name="submit" value="Opslaan">
+					<input type="submit" name="submit" value="Verwijder">
 					<input type="reset">
 					</div>
 				</form>
+				<br><br><br>
 			</div> <!-- end post-form -->
 	</div>
 

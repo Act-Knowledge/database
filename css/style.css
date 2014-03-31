@@ -259,7 +259,7 @@ input#button {
 
 form {
 	width: 780px;
-	height: 500px;
+	height: auto;
 
 }					
 
