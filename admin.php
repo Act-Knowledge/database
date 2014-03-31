@@ -30,7 +30,7 @@ require("./loginbeveiliging.php");
 				if($row->type == '4')
 				{
 		 			
-		 				echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 				echo'<dd><a href="./veranderen.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
 		 			
 				}
 				
@@ -52,7 +52,7 @@ require("./loginbeveiliging.php");
 				if($row->type == '3')
 				{
 		 			
-		 				echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 				echo'<dd><a href="./veranderen.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
 		 			
 				}
 				
@@ -75,7 +75,7 @@ require("./loginbeveiliging.php");
 				if($row->type == '1')
 				{
 		 			
-		 				echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 				echo'<dd><a href="./veranderen.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
 		 			
 				}
 				
@@ -97,7 +97,7 @@ require("./loginbeveiliging.php");
 				if($row->type == '2')
 				{
 		 			
-		 				echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 				echo'<dd><a href="./veranderen.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
 		 				
 				}
 				

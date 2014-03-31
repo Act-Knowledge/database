@@ -69,7 +69,7 @@ $row = mysqli_fetch_object($sql);
 					</select>
 
 					<? if (file_exists("ckeditor/ckeditor.js")): ?>
-<textarea name="bericht" id="descr" style="width: 800px; height: 400px" rows="20"><? echo $row->bericht; ?></textarea>
+<textarea name="bericht" id="descr" style="width: 800px; height: 400px" rows="20"><?php echo $row->bericht; ?></textarea>
 <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 <script type="text/javascript">
 CKEDITOR.replace( 'descr',
@@ -80,12 +80,28 @@ CKEDITOR.replace( 'descr',
 <? endif; ?>
 
 					<?php
+					
+					if(!trim($row->afbeelding))
 					{
-					if
-			     echo	'<input type="text" name="afbeelding" size="70" placeholder="Afbeelding link hier">';
+			         echo	'<input type="text" name="afbeelding" size="70" placeholder="Afbeelding link hier">';
 					}
+					else
+					{
+					 echo	'<input type="text" name="afbeelding" size="70" value="'.$row->afbeelding.'">';
+					}
+					
+					
+					if(!trim($row->videolink))
+					{
+			         echo	'<input type="text" name="vidlink" size="70" placeholder="Video link hier">';
+					}
+					else
+					{
+					 echo	'<input type="text" name="vidlink" size="70" value="'.$row->videolink.'">';
+					}
+					
 					?>
-						<input type="text" name="vidlink" size="70" placeholder="Video link hier">
+						
 					
 					<div class="enter">
 					<input type="submit" name="submit" value="submit">
