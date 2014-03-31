@@ -166,6 +166,15 @@ require("./template/header.php");
 				 }
 				}
 				}
+				else
+				{
+				  echo "Geen zoekresultaten";
+				}
+				}
+				else
+				{
+				
+		       	  echo "Vul een zoek woord in!";
 				}
 				}
 				?>
