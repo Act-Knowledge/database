@@ -4,7 +4,7 @@ require("./template/header.php");
 
 require("./loginbeveiliging.php");
 
-if(isset($_GET['id']))
+if(!isset($_GET['id']))
 {
 die('Geen geldig id');
 }
@@ -45,7 +45,7 @@ $row = mysqli_fetch_object($sql);
 					
 			<form action="verander.php" method="post">
 			
-					<input type="text" name="title" size="70" placeholder="Titel hier">
+					<input type="text" name="title" size="70" value="<?php echo $row->titel; ?>">
 
                    <select name="cata">
 				   <?php
@@ -69,7 +69,7 @@ $row = mysqli_fetch_object($sql);
 					</select>
 
 					<? if (file_exists("ckeditor/ckeditor.js")): ?>
-<textarea name="bericht" id="descr" style="width: 800px; height: 400px" rows="20"><? echo $descr; ?></textarea>
+<textarea name="bericht" id="descr" style="width: 800px; height: 400px" rows="20"><? echo $row->bericht; ?></textarea>
 <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 <script type="text/javascript">
 CKEDITOR.replace( 'descr',
@@ -79,7 +79,12 @@ CKEDITOR.replace( 'descr',
 </script>
 <? endif; ?>
 
-					<input type="text" name="afbeelding" size="70" placeholder="Afbeelding link hier">
+					<?php
+					{
+					if
+			     echo	'<input type="text" name="afbeelding" size="70" placeholder="Afbeelding link hier">';
+					}
+					?>
 						<input type="text" name="vidlink" size="70" placeholder="Video link hier">
 					
 					<div class="enter">
