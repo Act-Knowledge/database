@@ -8,7 +8,7 @@ require("./loginbeveiliging.php");
 	<div class="wrapper">
 
 	<div id="main">
-	<?php echo "<center>Welkom ".User::getUserData('username').", In het allerbeste paneel ter wereld!<br><br></center>"; ?>
+	<?php echo "<center>Welkom ".User::getUserData('username').", hier kun je berichten toevoegen en aanpassen. Veel succes!<br><Br>"; ?>
 			<div class="uploads">
 			<center>
 				<section class="load1"><img src="img/add/video.png" class="image"/></section>
