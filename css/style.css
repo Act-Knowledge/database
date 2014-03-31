@@ -155,7 +155,6 @@ section.col3 {
 
 #main {
 	margin-top: 100px;
-
 }
 
 .uploads {
@@ -382,6 +381,13 @@ footer {
 		width:30%;
 		height:auto;
 		float: left;
+		margin-right: 5%;
+	} 
+	.rijadmin {
+		width:15%;
+		height:auto;
+		float: left;
+		 position: absolute;
 		margin-right: 5%;
 	} 
 

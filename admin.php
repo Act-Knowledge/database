@@ -6,7 +6,113 @@ require("./loginbeveiliging.php");
 ?>
 
 	<div class="wrapper">
+	<div class="rijadmin">
+			<div class="tutorials">
+		 		<h3>Archief</h3>
+				
 
+		 		<?php 
+				
+				
+				echo'<section class="tekst">';
+			
+			$sql = $mysqli->query("SELECT * FROM tuts WHERE type = 4") or die('error');
+	        
+			if(mysqli_num_rows($sql) > 0)
+			{
+			echo'<dt><b>jQuery</b></dt>';
+				while($row = mysqli_fetch_object($sql))
+				{
+				
+				
+				echo'<dl>';
+		 		
+				if($row->type == '4')
+				{
+		 			
+		 				echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 			
+				}
+				
+				echo'</dl>';
+		 		
+				
+				}
+				}
+				echo'<br>';
+				$sql = $mysqli->query("SELECT * FROM tuts WHERE type = 3") or die('error');
+	        
+			if(mysqli_num_rows($sql) > 0)
+			{
+			
+		 		echo'<dt><b>PHP</b></dt>';
+				while($row = mysqli_fetch_object($sql))
+				{
+               echo'<dl>';
+				if($row->type == '3')
+				{
+		 			
+		 				echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 			
+				}
+				
+				echo'</dl>';
+		 		
+				
+				}
+				}
+				echo'<br>';
+				
+				$sql = $mysqli->query("SELECT * FROM tuts WHERE type = 1") or die('error');
+	        
+			if(mysqli_num_rows($sql) > 0)
+			{
+			echo'<dt><b>HTML</b></dt>';
+				while($row = mysqli_fetch_object($sql))
+				{
+				echo'<dl>';
+		 		
+				if($row->type == '1')
+				{
+		 			
+		 				echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 			
+				}
+				
+				echo'</dl>';
+		 		
+				}
+				}
+				echo'<br>';
+				$sql = $mysqli->query("SELECT * FROM tuts WHERE type = 2") or die('error');
+	        
+			if(mysqli_num_rows($sql) > 0)
+			{
+			echo'<dt><b>CSS</b></dt>';
+				while($row = mysqli_fetch_object($sql))
+				{
+				
+					echo'<dl>';
+		 		
+				if($row->type == '2')
+				{
+		 			
+		 				echo'<dd><a href="./article.php?id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 				
+				}
+				
+				echo'</dl>';
+		 		
+				}
+				echo'</section>';
+				}
+				
+				
+				?>
+				
+				
+			</div>
+		</div>
 	<div id="main">
 	<?php echo "<center>Welkom ".User::getUserData('username').", hier kun je berichten toevoegen en aanpassen. Veel succes!<br><Br>"; ?>
 			<div class="uploads">
