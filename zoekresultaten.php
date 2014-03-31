@@ -14,7 +14,7 @@ require("./template/header.php");
 		 		<?php 
 				
 				if(isset($_GET['submit']))
-             {
+            {
 			 
             $zoek = Security($_GET['zoek']);
             if(trim($zoek))
@@ -25,87 +25,148 @@ require("./template/header.php");
 			if(mysqli_num_rows($sql) > 0)
 			{
 			
-				while($row = mysqli_fetch_object($sql))
+				$row = mysqli_fetch_object($sql);
+				
+				 echo'<section class="tekst">';
+				 
+				if(isset($row))
 				{
 				
-				echo'<section class="tekst">';
+				 if($row->type == '4')
+				 {
 				
-				echo'<dl>';
-		 		echo'<dt><b>jQuery</b></dt>';
-				if($row->type == '4')
-				{
+				
+				
+				  $sql = $mysqli->query("SELECT * FROM tuts WHERE id = '".$row->id."'") or die('error');
+	        
+			      if(mysqli_num_rows($sql) > 0)
+			      {
+			
+		 		   echo'<dt><b>jQuery</b></dt>';
+				   while($row = mysqli_fetch_object($sql))
+				   {
+				
+                    echo'<dl>';
+				  
+				
 		 			
-		 				echo'<dd><a href="./zoekresultaten.php?zoek='.$zoek.'&submit=zoeken&id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 		    echo'<dd><a href="./zoekresultaten.php?id='.$row->id.'&zoek='.$zoek.'&submit=1">'.$row->titel.'</a></dd>';
 		 			
-				}
-				else
-				{
-				echo "Geen resultaten";
-				}
-				echo'</dl>';
-		 		echo'<br>';
 				
 				
-               echo'<dl>';
-		 		echo'<dt><b>PHP</b></dt>';
-				if($row->type == '3')
+				    echo'</dl>';
+		 		
+				
+				    }
+				  }
+				  echo'<br>';
+				 }
+				}
+				
+				if(isset($row))
 				{
+				
+				 if($row->type == '3')
+				 {
+				
+				
+				
+				  $sql = $mysqli->query("SELECT * FROM tuts WHERE id = '".$row->id."'") or die('error');
+	        
+			      if(mysqli_num_rows($sql) > 0)
+			      {
+			
+		 		   echo'<dt><b>PHP</b></dt>';
+				   while($row = mysqli_fetch_object($sql))
+				   {
+				
+                    echo'<dl>';
+				  
+				
 		 			
-		 				echo'<dd><a href="./zoekresultaten.php?zoek='.$zoek.'&submit=zoeken&id='.$row->id.'">'.$row->titel.'</a></dd>';
+		 		    echo'<dd><a href="./zoekresultaten.php?id='.$row->id.'&zoek='.$zoek.'&submit=1">'.$row->titel.'</a></dd>';
+		 		
+				
+				
+				    echo'</dl>';
+		 		
+				
+				    }
+				  }
+				  echo'<br>';
+				 }
+				}
+				
+				
+				if(isset($row))
+				{
+				
+				 if($row->type == '1')
+				 {
+				
+				
+				
+				  $sql = $mysqli->query("SELECT * FROM tuts WHERE id = '".$row->id."'") or die('error');
+	        
+			      if(mysqli_num_rows($sql) > 0)
+			      {
+			
+		 		   echo'<dt><b>HTML</b></dt>';
+				   while($row = mysqli_fetch_object($sql))
+				   {
+				
+                    echo'<dl>';
+				  
+				
 		 			
-				}
-				else
-				{
-				echo "Geen resultaten";
-				}
-				echo'</dl>';
-		 		echo'<br>';
+		 		    echo'<dd><a href="./zoekresultaten.php?id='.$row->id.'&zoek='.$zoek.'&submit=1">'.$row->titel.'</a></dd>';
+		 		
 				
 				
-				echo'<dl>';
-		 		echo'<dt><b>HTML</b></dt>';
-				if($row->type == '1')
+				    echo'</dl>';
+		 		
+				
+				    }
+				  }
+				  echo'<br>';
+				 }
+				}
+				
+					if(isset($row))
 				{
+				
+				 if($row->type == '2')
+				 {
+				
+				
+				
+				  $sql = $mysqli->query("SELECT * FROM tuts WHERE id = '".$row->id."'") or die('error');
+	        
+			      if(mysqli_num_rows($sql) > 0)
+			      {
+			
+		 		   echo'<dt><b>CSS</b></dt>';
+				   while($row = mysqli_fetch_object($sql))
+				   {
+				
+                    echo'<dl>';
+				  
+				
 		 			
-		 				echo'<dd><a href="./zoekresultaten.php?zoek='.$zoek.'&submit=zoeken&id='.$row->id.'">'.$row->titel.'</a></dd>';
-		 			
-				}
-				else
-				{
-				echo "Geen resultaten";
-				}
-				echo'</dl>';
-		 		echo'<br>';
+		 		    echo'<dd><a href="./zoekresultaten.php?id='.$row->id.'&zoek='.$zoek.'&submit=1">'.$row->titel.'</a></dd>';
+		 		
 				
 				
-					echo'<dl>';
-		 		echo'<dt><b>CSS</b></dt>';
-				if($row->type == '2')
-				{
-		 			
-		 				echo'<dd><a href="./zoekresultaten.php?zoek='.$zoek.'&submit=zoeken&id='.$row->id.'">'.$row->titel.'</a></dd>';
-		 				
-				}
-				else
-				{
-				echo "Geen resultaten";
-				}
-				echo'</dl>';
-		 		echo'</section>';
-				}
+				    echo'</dl>';
+		 		
 				
-				}
-				else{
-				echo "geen zoekresultaten";
-				}
-				}
-				else{
-				echo "geen zoekresultaten";
+				    }
+				  }
+				  echo'<br>';
+				 }
 				}
 				}
-				else
-				{
-				echo "Geen zoekwoord opgegeven!";
+				}
 				}
 				?>
 				
