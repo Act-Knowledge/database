@@ -168,13 +168,13 @@ require("./template/header.php");
 				}
 				else
 				{
-				  echo "Geen zoekresultaten";
+				  echo "- Geen zoekresultaten.";
 				}
 				}
 				else
 				{
 				
-		       	  echo "Vul een zoek woord in!";
+		       	  echo "- Vul een zoek woord in!";
 				}
 				}
 				?>
